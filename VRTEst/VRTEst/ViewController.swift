@@ -24,7 +24,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
 
         do {
             // .record not works!
-            //try recordingSession.setCategory(.record, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.allowBluetooth)
+            //try recordingSession.setCategory(.record, options: AVAudioSession.CategoryOptions.allowBluetooth)
             try recordingSession.setCategory(.playAndRecord, options: AVAudioSession.CategoryOptions.allowBluetooth)
             try recordingSession.setActive(true)
             recordingSession.requestRecordPermission() { [unowned self] allowed in
